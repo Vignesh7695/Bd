@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Sunmathi!</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            background: #fbd3e9;
+            background: linear-gradient(to right, #fbd3e9, #bb377d);
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            width: 100%;
+            animation: fadeIn 2s ease-out forwards;
+            opacity: 0;
+            transform: translateY(50px);
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            color: #ff69b4;
+            margin-bottom: 10px;
+            animation: textSlide 2s ease forwards;
+        }
+
+        h2 {
+            color: #bb377d;
+            margin-bottom: 20px;
+            font-size: 1.2em;
+        }
+
+        @keyframes textSlide {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .intro-text {
+            font-size: 1.2em;
+            color: #333;
+            animation: textSlide 2s ease 1s forwards;
+            opacity: 0;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 15px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #ff69b4;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            animation: buttonPop 2s ease 1.5s forwards;
+            opacity: 0;
+        }
+
+        button:hover {
+            background-color: #d15f8f;
+        }
+
+        @keyframes buttonPop {
+            to {
+                opacity: 1;
+                transform: scale(1.05);
+            }
+        }
+
+        .hidden {
+            display: none;
+            font-size: 1.1em;
+            color: #ff69b4;
+            margin-top: 20px;
+            animation: fadeInMessage 1s ease-out forwards;
+        }
+
+        @keyframes fadeInMessage {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Happy Birthday, Sunmathi!</h1>
+        <h2>🎂 Age: 21 🎂</h2>
+        <p class="intro-text">Today is your special day, and I just want to remind you how much you mean to me. 🎉</p>
+        
+        <button onclick="revealMessage()">Click for a Surprise Message</button>
+        
+        <p id="surprise-message" class="hidden">You are the light in my life, Sunmathi. I hope your birthday is as amazing as you are! Love you endlessly. ❤️</p>
+    </div>
+    <script>
+        function revealMessage() {
+            const message = document.getElementById("surprise-message");
+            message.classList.toggle("hidden");
+        }
+    </script>
+</body>
+</html>
